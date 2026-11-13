@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VYRO | Premium Fashion &amp; Lifestyle</title>
+  <meta name="description" content="VYRO is a premium Gen Z fashion and lifestyle store. Shop eyewear, clothing, watches, accessories, bags and shoes from the AW26 collection.">
+  <meta name="theme-color" content="#060912" id="metaThemeColor">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060912'/%3E%3Cpath d='M14 18l18 30 18-30' stroke='%23C8FF4D' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("vyro_theme");
+        if (saved === "light" || saved === "dark") document.documentElement.setAttribute("data-theme", saved);
+      } catch (error) {}
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="is-loading no-scroll">
+  <noscript><p class="noscript-note">VYRO needs JavaScript to run the store. Please enable JavaScript and reload the page.</p></noscript>
+
+  <div id="loader" class="loader" role="status" aria-live="polite">
+    <span class="loader-corner loader-corner--tl">AW26</span>
+    <span class="loader-corner loader-corner--tr">Drop 04</span>
+    <span class="loader-corner loader-corner--bl">Cairo / Worldwide</span>
+    <span class="loader-corner loader-corner--br">Loading</span>
+    <div class="loader-inner">
+      <div class="loader-mark" aria-label="VYRO">
+        <span style="--i:0">V</span><span style="--i:1">Y</span><span style="--i:2">R</span><span style="--i:3">O</span>
+      </div>
+      <p class="loader-tag">Premium fashion &amp; lifestyle</p>
+      <div class="loader-meter"><span id="loaderBar" class="loader-bar"></span></div>
+      <span id="loaderCount" class="loader-count">0%</span>
+    </div>
+  </div>
+
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="siteHeader" class="site-header">
+    <div class="container header-inner">
+      <button id="menuToggle" class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+      <a href="#top" class="logo" aria-label="VYRO home">
+        <svg class="logo-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M5 7l11 19L27 7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="6" r="2.4" fill="var(--accent)"/></svg>
+        <span class="logo-text">VYRO</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#categories">Categories</a>
+        <a href="#shop">Shop</a>
+        <a href="#new-arrivals">New In</a>
+        <a href="#editorial">Journal</a>
+      </nav>
+      <div class="header-actions">
+        <button id="searchOpen" class="icon-btn" type="button" aria-label="Search products"><i class="ic" data-icon="search"></i></button>
+        <button id="themeToggle" class="icon-btn theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <i class="ic ic-sun" data-icon="sun"></i>
+          <i class="ic ic-moon" data-icon="moon"></i>
+        </button>
+        <button id="wishlistOpen" class="icon-btn has-badge" type="button" aria-label="Open wishlist">
+          <i class="ic" data-icon="heart"></i>
+          <span id="wishCount" class="badge-count" data-count="0">0</span>
+        </button>
+        <button id="cartOpen" class="icon-btn has-badge" type="button" aria-label="Open cart">
+          <i class="ic" data-icon="bag"></i>
+          <span id="cartCount" class="badge-count" data-count="0">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <div class="container mobile-menu-inner">
+      <nav class="mobile-nav" aria-label="Mobile">
+        <a href="#categories" data-close-menu style="--i:0"><span>01</span>Categories</a>
+        <a href="#shop" data-close-menu style="--i:1"><span>02</span>Shop</a>
+        <a href="#new-arrivals" data-close-menu style="--i:2"><span>03</span>New In</a>
+        <a href="#editorial" data-close-menu style="--i:3"><span>04</span>Journal</a>
+      </nav>
+      <div class="mobile-cats" style="--i:4">
+        <p class="eyebrow">Shop by category</p>
+        <div class="chips">
+          <button type="button" class="chip" data-category="eyewear">Eyewear</button>
+          <button type="button" class="chip" data-category="clothing">Clothing</button>
+          <button type="button" class="chip" data-category="watches">Watches</button>
+          <button type="button" class="chip" data-category="accessories">Accessories</button>
+          <button type="button" class="chip" data-category="bags">Bags</button>
+          <button type="button" class="chip" data-category="shoes">Shoes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <section id="top" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="hero-orb hero-orb--a" data-parallax="-0.12"></span>
+        <span class="hero-orb hero-orb--b" data-parallax="0.1"></span>
+        <span class="hero-grid"></span>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow hero-anim" style="--i:0"><span class="dot"></span>AW26 / Drop 04 is live</p>
+          <h1 class="hero-title">
+            <span class="title-line"><span class="title-line-inner" style="--i:1">Wear the</span></span>
+            <span class="title-line"><span class="title-line-inner" style="--i:2">next</span></span>
+            <span class="title-line"><span class="title-line-inner outline" style="--i:3">era.</span></span>
+          </h1>
+          <p class="hero-sub hero-anim" style="--i:4">Eyewear, clothing, watches, accessories, bags and shoes engineered for a generation that moves faster than the feed. Limited runs. Zero filler.</p>
+          <div class="hero-cta hero-anim" style="--i:5">
+            <a class="btn btn-primary" href="#shop" data-magnetic>Shop the drop <i class="ic" data-icon="arrow-right" data-size="18"></i></a>
+            <a class="btn btn-ghost" href="#editorial" data-magnetic>Read the story</a>
+          </div>
+          <dl class="hero-stats hero-anim" style="--i:6">
+            <div><dt data-count="24" data-suffix="+">24+</dt><dd>Signature pieces</dd></div>
+            <div><dt data-count="6">6</dt><dd>Core categories</dd></div>
+            <div><dt data-count="14" data-suffix="d">14d</dt><dd>Easy returns</dd></div>
+          </dl>
+        </div>
+        <div class="hero-visual hero-anim" style="--i:3">
+          <div class="hero-tilt" data-tilt>
+            <div class="hero-frame" data-media-slot="hero" data-cat="hero"></div>
+            <span class="hero-tag">AW26 / Drop 04</span>
+            <div class="hero-ring" aria-hidden="true">
+              <svg viewBox="0 0 200 200">
+                <defs><path id="ringPath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+                <text><textPath href="#ringPath" textLength="480" lengthAdjust="spacing">VYRO  *  NEW SEASON  *  AW26  *  LIMITED  *</textPath></text>
+              </svg>
+              <i class="ic" data-icon="arrow-up-right" data-size="26"></i>
+            </div>
+            <a href="#shop" id="heroCardA" class="hero-chip hero-chip--a" aria-label="Quick view featured product"></a>
+            <a href="#shop" id="heroCardB" class="hero-chip hero-chip--b" aria-label="Quick view featured product"></a>
+          </div>
+        </div>
+      </div>
+      <a href="#categories" class="scroll-cue" aria-label="Scroll to categories"><span>Scroll</span><i></i></a>
+    </section>
+
+    <div class="ticker" aria-label="Store announcements">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span>Free shipping over EGP 3,000</span><i class="ticker-sep"></i>
+          <span>New arrivals every Friday</span><i class="ticker-sep"></i>
+          <span>Cash on delivery available</span><i class="ticker-sep"></i>
+          <span>14-day easy returns</span><i class="ticker-sep"></i>
+          <span>AW26 collection live now</span><i class="ticker-sep"></i>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <span>Free shipping over EGP 3,000</span><i class="ticker-sep"></i>
+          <span>New arrivals every Friday</span><i class="ticker-sep"></i>
+          <span>Cash on delivery available</span><i class="ticker-sep"></i>
+          <span>14-day easy returns</span><i class="ticker-sep"></i>
+          <span>AW26 collection live now</span><i class="ticker-sep"></i>
+        </div>
+      </div>
+    </div>
+
+    <section id="categories" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-reveal><span class="dot"></span>Shop by category</p>
+          <h2 class="section-title" data-reveal>Six worlds.<br><em>One signal.</em></h2>
+          <p class="section-lede" data-reveal>Pick your lane. Every category is built on the same obsession: sharp design, honest materials and pieces that look better the more you wear them.</p>
+        </header>
+        <div id="categoryGrid" class="category-grid"></div>
+      </div>
+    </section>
+
+    <section id="shop" class="section section-alt">
+      <div class="container">
+        <header class="section-head section-head--row">
+          <div>
+            <p class="eyebrow" data-reveal><span class="dot"></span>The collection</p>
+            <h2 class="section-title" data-reveal>Featured <em>pieces</em></h2>
+          </div>
+          <p class="section-lede" data-reveal>Filter by category, search by name and sort the way you shop. Everything is priced in EGP.</p>
+        </header>
+
+        <div class="shop-toolbar" data-reveal>
+          <div id="filterChips" class="chips" role="group" aria-label="Filter by category">
+            <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All <span class="chip-count">0</span></button>
+            <button type="button" class="chip" data-filter="eyewear" aria-pressed="false">Eyewear <span class="chip-count">0</span></button>
+            <button type="button" class="chip" data-filter="clothing" aria-pressed="false">Clothing <span class="chip-count">0</span></button>
+            <button type="button" class="chip" data-filter="watches" aria-pressed="false">Watches <span class="chip-count">0</span></button>
+            <button type="button" class="chip" data-filter="accessories" aria-pressed="false">Accessories <span class="chip-count">0</span></button>
+            <button type="button" class="chip" data-filter="bags" aria-pressed="false">Bags <span class="chip-count">0</span></button>
+            <button type="button" class="chip" data-filter="shoes" aria-pressed="false">Shoes <span class="chip-count">0</span></button>
+          </div>
+          <div class="toolbar-right">
+            <label class="search-field" for="shopSearch">
+              <i class="ic" data-icon="search" data-size="18"></i>
+              <input id="shopSearch" type="search" placeholder="Search by name or category" autocomplete="off">
+              <button id="shopSearchClear" class="search-clear" type="button" aria-label="Clear search" hidden><i class="ic" data-icon="close" data-size="16"></i></button>
+            </label>
+            <label class="select-field" for="sortSelect">
+              <span class="sr-only">Sort products</span>
+              <select id="sortSelect">
+                <option value="featured">Sort: Featured</option>
+                <option value="newest">Newest first</option>
+                <option value="price-asc">Price: Low to high</option>
+                <option value="price-desc">Price: High to low</option>
+                <option value="name-asc">Name: A to Z</option>
+                <option value="name-desc">Name: Z to A</option>
+              </select>
+              <i class="ic select-arrow" data-icon="chevron-down" data-size="16"></i>
+            </label>
+          </div>
+        </div>
+
+        <div id="subFilters" class="chips chips--sub" role="group" aria-label="Filter clothing type" hidden>
+          <button type="button" class="chip is-active" data-sub="all" aria-pressed="true">All clothing</button>
+          <button type="button" class="chip" data-sub="tops" aria-pressed="false">Tops</button>
+          <button type="button" class="chip" data-sub="pants" aria-pressed="false">Pants</button>
+        </div>
+
+        <p id="resultCount" class="result-count" aria-live="polite"></p>
+        <div id="productGrid" class="product-grid"></div>
+
+        <div id="emptyState" class="empty-state" hidden>
+          <div class="empty-glyph" aria-hidden="true"><i class="ic" data-icon="search" data-size="34"></i></div>
+          <h3>No pieces found</h3>
+          <p>We couldn't find a match. Try a different word or reset the filters.</p>
+          <button id="resetFilters" class="btn btn-primary" type="button">Reset filters</button>
+        </div>
+
+        <div class="load-more-wrap">
+          <button id="loadMore" class="btn btn-ghost" type="button" hidden>Load more pieces</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="new-arrivals" class="section">
+      <div class="container">
+        <header class="section-head section-head--row">
+          <div>
+            <p class="eyebrow" data-reveal><span class="dot"></span>Just landed</p>
+            <h2 class="section-title" data-reveal>New <em>arrivals</em></h2>
+          </div>
+          <div class="scroller-controls" data-reveal>
+            <button id="newPrev" class="round-btn" type="button" aria-label="Scroll new arrivals left"><i class="ic" data-icon="arrow-left" data-size="20"></i></button>
+            <button id="newNext" class="round-btn" type="button" aria-label="Scroll new arrivals right"><i class="ic" data-icon="arrow-right" data-size="20"></i></button>
+          </div>
+        </header>
+      </div>
+      <div id="newScroller" class="scroller">
+        <div id="newTrack" class="scroller-track"></div>
+      </div>
+    </section>
+
+    <section id="editorial" class="editorial">
+      <div class="container">
+        <div class="editorial-top" data-reveal>
+          <span>VYRO Journal</span>
+          <span>Issue 04</span>
+          <span>AW / 2026</span>
+        </div>
+        <h2 class="editorial-title">
+          <span class="row" data-reveal>Not a trend.</span>
+          <span class="row row--outline" data-reveal data-delay="120">A signal.</span>
+        </h2>
+        <div class="editorial-grid">
+          <figure class="editorial-figure editorial-figure--lg" data-reveal="left">
+            <div class="fig-crop"><div class="frame" data-parallax="0.06" data-media-slot="campaign-0" data-cat="eyewear"></div></div>
+            <figcaption><span>01</span>After midnight, still switched on</figcaption>
+          </figure>
+          <div class="editorial-copy" data-reveal>
+            <p class="editorial-lead">Fashion moves in loops. Signals don't. AW26 is built for people who read the room before they walk into it, with silhouettes that hold their shape and details that reward a second look.</p>
+            <p class="editorial-text">We designed six categories as one system: frames that frame you, layers that move with you, watches that keep your time, accessories that finish the sentence, bags that carry it all and shoes that take it further. No filler, no fast-fashion noise.</p>
+            <blockquote class="editorial-quote">&ldquo;Dress like the future already happened.&rdquo;<cite>VYRO Studio, Cairo</cite></blockquote>
+            <ul class="editorial-index">
+              <li><button type="button" data-category="eyewear"><span>01</span>Eyewear<i class="ic" data-icon="arrow-up-right" data-size="18"></i></button></li>
+              <li><button type="button" data-category="clothing"><span>02</span>Clothing<i class="ic" data-icon="arrow-up-right" data-size="18"></i></button></li>
+              <li><button type="button" data-category="watches"><span>03</span>Watches<i class="ic" data-icon="arrow-up-right" data-size="18"></i></button></li>
+              <li><button type="button" data-category="accessories"><span>04</span>Accessories<i class="ic" data-icon="arrow-up-right" data-size="18"></i></button></li>
+              <li><button type="button" data-category="bags"><span>05</span>Bags<i class="ic" data-icon="arrow-up-right" data-size="18"></i></button></li>
+              <li><button type="button" data-category="shoes"><span>06</span>Shoes<i class="ic" data-icon="arrow-up-right" data-size="18"></i></button></li>
+            </ul>
+            <a class="btn btn-primary" href="#shop" data-magnetic>Shop the campaign <i class="ic" data-icon="arrow-right" data-size="18"></i></a>
+          </div>
+          <div class="editorial-stack">
+            <figure class="editorial-figure" data-reveal="right">
+              <div class="fig-crop fig-crop--square"><div class="frame" data-parallax="-0.05" data-media-slot="campaign-1" data-cat="watches"></div></div>
+              <figcaption><span>02</span>Oversized by design</figcaption>
+            </figure>
+            <figure class="editorial-figure editorial-figure--offset" data-reveal="right" data-delay="150">
+              <div class="fig-crop fig-crop--tall"><div class="frame" data-parallax="0.05" data-media-slot="campaign-2" data-cat="clothing"></div></div>
+              <figcaption><span>03</span>Layers for the next era</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="ticker ticker--big ticker--reverse" aria-hidden="true">
+        <div class="ticker-track">
+          <div class="ticker-group">
+            <span class="is-fill">Street</span><i class="ticker-sep"></i><span>Signal</span><i class="ticker-sep"></i><span class="is-fill">System</span><i class="ticker-sep"></i><span>Source</span><i class="ticker-sep"></i>
+          </div>
+          <div class="ticker-group">
+            <span class="is-fill">Street</span><i class="ticker-sep"></i><span>Signal</span><i class="ticker-sep"></i><span class="is-fill">System</span><i class="ticker-sep"></i><span>Source</span><i class="ticker-sep"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section newsletter">
+      <div class="container">
+        <div class="newsletter-card" data-reveal>
+          <div class="newsletter-copy">
+            <p class="eyebrow"><span class="dot"></span>The inner circle</p>
+            <h2 class="newsletter-title">Get the drop before <em>the feed.</em></h2>
+            <p>Early access to new releases, private sales and studio notes. Join now and get 10% off your first order.</p>
+          </div>
+          <form id="newsletterForm" class="newsletter-form" novalidate>
+            <label class="sr-only" for="newsletterEmail">Email address</label>
+            <div class="news-field">
+              <input id="newsletterEmail" type="email" placeholder="you@email.com" autocomplete="email" required>
+              <button type="submit" class="btn btn-primary">Join VYRO</button>
+            </div>
+            <p id="newsletterMessage" class="form-message" role="status" aria-live="polite"></p>
+            <p class="form-note">No spam. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo" aria-label="VYRO back to top">
+          <svg class="logo-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M5 7l11 19L27 7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="6" r="2.4" fill="var(--accent)"/></svg>
+          <span class="logo-text">VYRO</span>
+        </a>
+        <p>A premium Gen Z fashion and lifestyle house. Eyewear, clothing, watches, accessories, bags and shoes designed to be worn loud.</p>
+        <div class="socials">
+          <a class="round-btn" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="VYRO on Instagram"><i class="ic" data-icon="instagram" data-size="18"></i></a>
+          <a class="round-btn" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="VYRO on TikTok"><i class="ic" data-icon="tiktok" data-size="18"></i></a>
+          <a class="round-btn" id="footerWhatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Order on WhatsApp"><i class="ic" data-icon="whatsapp" data-size="18"></i></a>
+          <a class="round-btn" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="VYRO on YouTube"><i class="ic" data-icon="youtube" data-size="18"></i></a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Shop">
+        <h3>Shop</h3>
+        <ul>
+          <li><button type="button" class="footer-link" data-category="eyewear">Eyewear</button></li>
+          <li><button type="button" class="footer-link" data-category="clothing">Clothing</button></li>
+          <li><button type="button" class="footer-link" data-category="watches">Watches</button></li>
+          <li><button type="button" class="footer-link" data-category="accessories">Accessories</button></li>
+          <li><button type="button" class="footer-link" data-category="bags">Bags</button></li>
+          <li><button type="button" class="footer-link" data-category="shoes">Shoes</button></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Help">
+        <h3>Help</h3>
+        <ul>
+          <li><button type="button" class="footer-link" data-info="shipping">Shipping</button></li>
+          <li><button type="button" class="footer-link" data-info="returns">Returns</button></li>
+          <li><button type="button" class="footer-link" data-info="sizeguide">Size guide</button></li>
+          <li><button type="button" class="footer-link" data-info="faq">FAQ</button></li>
+          <li><button type="button" class="footer-link" data-info="contact">Contact</button></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h3>Company</h3>
+        <ul>
+          <li><button type="button" class="footer-link" data-info="about">About VYRO</button></li>
+          <li><a class="footer-link" href="#editorial">Journal</a></li>
+          <li><button type="button" class="footer-link" data-info="privacy">Privacy</button></li>
+          <li><button type="button" class="footer-link" data-info="terms">Terms</button></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 VYRO. All rights reserved.</p>
+      <p>Orders are confirmed on WhatsApp. Pay on delivery.</p>
+      <a class="footer-link" href="#top">Back to top <i class="ic" data-icon="arrow-up-right" data-size="16"></i></a>
+    </div>
+    <div class="footer-wordmark" aria-hidden="true">VYRO</div>
+    <div class="footer-credit">
+      <span class="credit-line" aria-hidden="true"></span>
+      <p class="credit-label">Designed &amp; built by</p>
+      <p class="credit-name">ENG <span>ROAA</span> AHMED</p>
+      <span class="credit-line" aria-hidden="true"></span>
+    </div>
+  </footer>
+
+  <div id="backdrop" class="backdrop" aria-hidden="true"></div>
+
+  <aside id="cartDrawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+    <header class="drawer-head">
+      <h2 id="cartTitle">Your cart <span id="cartDrawerCount" class="drawer-count">0</span></h2>
+      <button class="icon-btn" type="button" data-close aria-label="Close cart"><i class="ic" data-icon="close"></i></button>
+    </header>
+    <div id="shippingMeter" class="shipping-meter" hidden>
+      <p id="shippingText"></p>
+      <div class="meter"><span id="shippingBar"></span></div>
+    </div>
+    <div class="drawer-body">
+      <ul id="cartItems" class="line-list"></ul>
+      <div id="cartEmpty" class="drawer-empty">
+        <div class="empty-glyph" aria-hidden="true"><i class="ic" data-icon="bag" data-size="34"></i></div>
+        <h3>Your cart is empty</h3>
+        <p>Nothing here yet. Start with something that feels like you.</p>
+        <button class="btn btn-primary" type="button" data-close data-goto="#shop">Start shopping</button>
+      </div>
+    </div>
+    <footer id="cartFooter" class="drawer-foot" hidden>
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd id="cartSubtotal">EGP 0</dd></div>
+        <div><dt>Shipping</dt><dd id="cartShipping">EGP 0</dd></div>
+        <div class="totals-grand"><dt>Total</dt><dd id="cartTotal">EGP 0</dd></div>
+      </dl>
+      <button id="checkoutBtn" class="btn btn-primary btn-block" type="button">Checkout <i class="ic" data-icon="arrow-right" data-size="18"></i></button>
+      <button id="clearCart" class="text-btn" type="button">Clear cart</button>
+    </footer>
+  </aside>
+
+  <aside id="wishlistDrawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="wishTitle" aria-hidden="true">
+    <header class="drawer-head">
+      <h2 id="wishTitle">Wishlist <span id="wishDrawerCount" class="drawer-count">0</span></h2>
+      <button class="icon-btn" type="button" data-close aria-label="Close wishlist"><i class="ic" data-icon="close"></i></button>
+    </header>
+    <div class="drawer-body">
+      <ul id="wishlistItems" class="line-list"></ul>
+      <div id="wishlistEmpty" class="drawer-empty">
+        <div class="empty-glyph" aria-hidden="true"><i class="ic" data-icon="heart" data-size="34"></i></div>
+        <h3>Your wishlist is empty</h3>
+        <p>Tap the heart on any piece to save it for later.</p>
+        <button class="btn btn-primary" type="button" data-close data-goto="#shop">Browse the collection</button>
+      </div>
+    </div>
+    <footer id="wishlistFooter" class="drawer-foot" hidden>
+      <button id="wishlistAddAll" class="btn btn-primary btn-block" type="button">Add all to cart <i class="ic" data-icon="bag" data-size="18"></i></button>
+    </footer>
+  </aside>
+
+  <div id="searchLayer" class="search-layer" role="dialog" aria-modal="true" aria-label="Search products" aria-hidden="true">
+    <div class="container search-inner">
+      <form id="searchForm" class="search-form" role="search">
+        <i class="ic" data-icon="search" data-size="28"></i>
+        <label class="sr-only" for="searchInput">Search products or categories</label>
+        <input id="searchInput" type="search" placeholder="Search products or categories" autocomplete="off">
+        <button class="icon-btn" type="button" data-close aria-label="Close search"><i class="ic" data-icon="close"></i></button>
+      </form>
+      <div id="searchSuggest" class="search-suggest">
+        <span>Try</span>
+        <button type="button" class="chip" data-suggest="sunglasses">Sunglasses</button>
+        <button type="button" class="chip" data-suggest="hoodie">Hoodie</button>
+        <button type="button" class="chip" data-suggest="watch">Watch</button>
+        <button type="button" class="chip" data-suggest="bag">Bag</button>
+      </div>
+      <ul id="searchResults" class="search-results"></ul>
+      <button id="searchViewAll" class="btn btn-ghost" type="button" hidden></button>
+    </div>
+  </div>
+
+  <div id="quickView" class="modal" role="dialog" aria-modal="true" aria-labelledby="quickTitle" aria-hidden="true">
+    <div class="modal-card quick-card">
+      <button class="icon-btn modal-close" type="button" data-close aria-label="Close quick view"><i class="ic" data-icon="close"></i></button>
+      <div id="quickViewBody" class="quick-body"></div>
+    </div>
+  </div>
+
+  <div id="checkoutModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" aria-hidden="true">
+    <div class="modal-card checkout-card">
+      <button class="icon-btn modal-close" type="button" data-close aria-label="Close checkout"><i class="ic" data-icon="close"></i></button>
+      <div id="checkoutBody" class="checkout-body"></div>
+    </div>
+  </div>
+
+  <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="infoTitle" aria-hidden="true">
+    <div class="modal-card info-card">
+      <button class="icon-btn modal-close" type="button" data-close aria-label="Close"><i class="ic" data-icon="close"></i></button>
+      <div class="info-inner">
+        <p class="eyebrow"><span class="dot"></span>VYRO</p>
+        <h2 id="infoTitle" class="info-title"></h2>
+        <div id="infoBody" class="info-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastRegion" class="toast-region" role="status" aria-live="polite"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
